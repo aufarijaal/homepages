@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    
+    <title>Blank Page</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text" id="time"></div>
+    <div class="text" id="greeting"></div>
+    <table>
+        <tr>
+            <td><div class="card c1">
+                    <div class="header edu">Edu</div>
+                    <div class="container">
+                        <div class="items"><a href="https://ekuliah.poltektegal.ac.id/">Ekuliah</a></div>
+                        <div class="items"><a href="http://siakad.poltektegal.ac.id/">Siakad</a></div>
+                        <div class="items"><a href="https://classroom.google.com/h">Classroom</a></div>
+                        <div class="items"><a href="https://new.edmodo.com/">Edmodo</a></div>
+                    </div>
+                </div>
+            </td>
+            <td><div class="card c2">
+                    <div class="header social">Social</div>
+                    <div class="container">
+                        <div class="items"><a href="https://web.whatsapp.com/">Whatsapp</a></div>
+                        <div class="items"><a href="https://www.instagram.com/">Instagram</a></div>
+                        <div class="items"><a href="facebook.com/">Facebook</a></div>
+                        <div class="items"><a href="github.com/">Github</a></div>
+                        <div class="items"><a href="https://dribbble.com/">Dribbble</a></div>
+                    </div>
+                </div>
+            </td>
+            <td><div class="card c3">
+                    <div class="header cloud">Cloud</div>
+                    <div class="container">
+                        <div class="items"><a href="https://drive.google.com/drive/my-drive">G Drive</a></div>
+                        <div class="items"><a href="https://mega.nz">MEGA</a></div>
+                        <div class="items"><a href="https://onedrive.live.com">OneDrive</a></div>
+                        <div class="items"><a href="https://app.mediafire.com/">MediaFire</a></div>
+                    </div>
+                </div>
+            </td>
+            <td><div class="card c3">
+                <div class="header cloud">Cloud</div>
+                <div class="container">
+                    <div class="items"><a href="https://drive.google.com/drive/my-drive">G Drive</a></div>
+                    <div class="items"><a href="https://mega.nz">MEGA</a></div>
+                    <div class="items"><a href="https://onedrive.live.com">OneDrive</a></div>
+                    <div class="items"><a href="https://app.mediafire.com/">MediaFire</a></div>
+                </div>
+            </div>
+        </td>
+        </tr>
+        <!-- <tr>
+            <td><div class="card c4"></div></td>
+            <td><div class="card c5"></div></td>
+            <td><div class="card c6"></div></td>
+        </tr> -->
+    </table>
+</body>
+<script>
+    var timeDisplay = document.getElementById("time");
+    var greeting = document.getElementById("greeting");
+    var totalCount = 4;
+    var today = new Date()
+    var currentHour = today.getHours()
+
+    function refreshTime() {
+    var dateString = new Date().toLocaleString(navigator.language, {
+        timeZone: "Asia/Jakarta", hour: '2-digit', minute:'2-digit', hour12: false
+    });
+    var formattedString = dateString.replace(", ", " - ");
+    timeDisplay.innerHTML = formattedString;
+    }
+
+    function ChangeIt() 
+    {
+    var num = Math.ceil( Math.random() * totalCount );
+    document.body.background = 'img/'+num+'.jpg';
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center center";
+    document.body.style.backgroundAttachment = "fixed";
+    }
+    
+
+    if (currentHour >= 0 && currentHour < 6) {
+        greeting.innerHTML = 'Mau ngapain pagi-pagi begini?';
+    } else if (currentHour >= 6 && currentHour < 10) {
+        greeting.innerHTML = 'Selamat Pagi';
+    } else if (currentHour >= 10 && currentHour < 15) {
+        greeting.innerHTML = 'Selamat Siang';
+    } else if (currentHour >= 15 && currentHour < 19) {
+        greeting.innerHTML = 'Selamat Sore';
+    } else {
+        greeting.innerHTML = 'Selamat Malam';
+    }
+    setInterval(refreshTime, 1000);
+    ChangeIt();
+</script>
+</html>

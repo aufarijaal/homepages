@@ -1,0 +1,104 @@
+@import 'mixins.scss', 'variables.scss';
+
+body {
+    font-family: $font;
+}
+table {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+}
+th {
+    color: $fgcolor;
+    text-align: center;
+}
+#time {
+    font-size: $time-size;
+    @include prevent-copy;
+    text-shadow: $text-shadow;
+}
+.greeting {
+    font-size: $greeting-size;
+    @include prevent-copy;
+    text-shadow: $text-shadow;
+}
+.card {
+    @include card-style;
+}
+.card:hover {
+    transform: translate(0px, 10px);
+}
+.header {
+    padding: 5px;
+    text-align: center;
+    border-radius: 7px;
+    margin: 20px 20px 10px 20px;
+    font-weight: 600;
+    color: $bgcolor;
+    @include prevent-copy;
+
+}
+.cloud {
+    background-color: $green;
+    box-shadow: 0px 5px 0px 0px darken($green, 12%);
+    transition-duration: 0.5s;
+}
+.social {
+    background-color: $red;
+    box-shadow: 0px 5px 0px 0px darken($red, 12%);
+    transition-duration: 0.5s;
+}
+.edu {
+    background-color: $cyan;
+    box-shadow: 0px 5px 0px 0px darken($cyan, 12%);
+    transition-duration: 0.5s;
+}
+.cloud:hover {
+    box-shadow: 0px 0px 0px 0px darken($green, 12%);
+}
+.social:hover {
+    box-shadow: 0px 0px 0px 0px darken($red, 12%);
+}
+.edu:hover {
+    box-shadow: 0px 0px 0px 0px darken($cyan, 12%);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-self: center;
+    margin-bottom: auto;
+    margin-top: 10px;
+}
+.items {
+    align-self: center;
+    margin: 5px 0;
+}
+ul {
+    list-style-type: none;
+    border:1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+li {
+    margin: 5px;
+    border:1px solid black;
+    display: flex;
+}
+a {
+    text-decoration: none;
+    color: $bgcolor;
+    font-weight: 500;
+}
+a:hover {
+    color: $indigo;
+}
+#text {
+    text-align: center;
+}
+  /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,20 @@
+@mixin card-style {
+    width: 180px;
+    height: 230px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: $fgcolor;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    box-shadow: 0px 19px 24px 5px rgba(0,0,0,0.17);
+    transition-duration: 0.5s;
+}
+@mixin prevent-copy {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
