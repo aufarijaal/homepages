@@ -4,25 +4,33 @@ body {
     font-family: $font;
 }
 table {
+    display: inline-block;
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    border: 1px solid black;
+    -ms-transform: translate(-50%, -35%);
+    transform: translate(-50%, -35%);
 }
 th {
     color: $fgcolor;
     text-align: center;
 }
+.text {
+    text-align: center;
+}
 #time {
+    margin-top: 10vh;
     font-size: $time-size;
+    font-weight: 700;
+    color: $fgcolor;
     @include prevent-copy;
     text-shadow: $text-shadow;
 }
-.greeting {
+#greeting {
     font-size: $greeting-size;
+    font-weight: 600;
+    color: $fgcolor;
     @include prevent-copy;
     text-shadow: $text-shadow;
 }
@@ -98,7 +106,10 @@ a {
 a:hover {
     color: $indigo;
 }
-#text {
+.quotes {
+    color: $fgcolor;
+    font-size: 2vh;
+    font-weight: 500;
     text-align: center;
 }
   /*# sourceMappingURL=main.css.map */

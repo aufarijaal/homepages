@@ -3,13 +3,13 @@ body {
 }
 
 table {
+  display: inline-block;
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  border: 1px solid black;
+  -webkit-transform: translate(-50%, -35%);
+          transform: translate(-50%, -35%);
 }
 
 th {
@@ -17,8 +17,15 @@ th {
   text-align: center;
 }
 
+.text {
+  text-align: center;
+}
+
 #time {
-  font-size: 20pt;
+  margin-top: 10vh;
+  font-size: 42pt;
+  font-weight: 700;
+  color: #F8F8F2;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -27,8 +34,10 @@ th {
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.563);
 }
 
-.greeting {
+#greeting {
   font-size: 32pt;
+  font-weight: 600;
+  color: #F8F8F2;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -171,7 +180,10 @@ a:hover {
   color: #6272A4;
 }
 
-#text {
+.quotes {
+  color: #F8F8F2;
+  font-size: 2vh;
+  font-weight: 500;
   text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
