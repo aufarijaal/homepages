@@ -3,7 +3,6 @@
     
     <title>Blank Page</title>
     <link rel="stylesheet" href="style/main.css">
-    <script src="./scripts/kata-motivasi.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -34,10 +33,10 @@
                 </div>
             </td>
             <td><div class="card c3">
-                    <div class="header cloud">Cloud</div>
-                    <div class="container">
-                        <div class="items"><a href="https://drive.google.com/drive/my-drive">G Drive</a></div>
-                        <div class="items"><a href="https://mega.nz">MEGA</a></div>
+                <div class="header cloud">Cloud</div>
+                <div class="container">
+                    <div class="items"><a href="https://drive.google.com/drive/my-drive">G Drive</a></div>
+                    <div class="items"><a href="https://mega.nz">MEGA</a></div>
                         <div class="items"><a href="https://onedrive.live.com">OneDrive</a></div>
                         <div class="items"><a href="https://app.mediafire.com/">MediaFire</a></div>
                     </div>
@@ -49,64 +48,64 @@
             <td><div class="card c5"></div></td>
             <td><div class="card c6"></div></td>
         </tr> -->
-        <div class="quotes" id="quotes"></div>
     </table>
 </div>
-</body>
+<div class="quotes" id="quotes"></div>
 <script>
     var timeDisplay = document.getElementById("time");
     var greeting = document.getElementById("greeting");
     var quotes = document.getElementById("quotes");
     var totalCount = 10;
-    var today = new Date()
-    var currentHour = today.getHours()
-    
-    var kataMotivasi = [ 
-    '"Bekerja keraslah, Bermimpilah lebih besar dan jadilah yang terbaik"',
-    '"Kebesaran sebenarnya dapat ditemukan dalam hal hal kecil yang terkadang kita lewatkan"',
-    '"Ketika kita memiliki satu sama lain, kita Memiliki segalanya"',
-    '"Apa yang akan Anda kerjakan, Ketika anda tahu anda tidak mungkin gagal"',
-    '"Jika anda menghabiskan waktu untuk mencoba menjadi baik dalam segala hal, Anda tidak akan pernah menjadi hebat dalam apapun"',
-    '"Hanya mereka yang berani mengambil resiko yang jauh pasti dapat menemukan Seberapa jauh seseorang dapat pergi"',
-    '"Anda menghalangi impian anda ketika anda mengizinkan ketakutan Anda tumbuh lebih besar dari keyakinan anda"',
-    '"Orang tua saya bekerja terlalu keras untuk saya bukan supaya saya tidak hanya menjadi orang biasa tetapi menjadi orang luar biasa"',
-    '"Berani mengambil keputusan maka anda telah melangkah 10 kali lebih cepat untuk sukses"'
+var today = new Date()
+var currentHour = today.getHours()
+
+var kataMotivasi = [ 
+'"Bekerja keraslah, Bermimpilah lebih besar dan jadilah yang terbaik"',
+'"Kebesaran sebenarnya dapat ditemukan dalam hal hal kecil yang terkadang kita lewatkan"',
+'"Ketika kita memiliki satu sama lain, kita Memiliki segalanya"',
+'"Apa yang akan Anda kerjakan, Ketika anda tahu anda tidak mungkin gagal"',
+'"Jika anda menghabiskan waktu untuk mencoba menjadi baik dalam segala hal, Anda tidak akan pernah menjadi hebat dalam apapun"',
+'"Hanya mereka yang berani mengambil resiko yang jauh pasti dapat menemukan Seberapa jauh seseorang dapat pergi"',
+'"Anda menghalangi impian anda ketika anda mengizinkan ketakutan Anda tumbuh lebih besar dari keyakinan anda"',
+'"Orang tua saya bekerja terlalu keras untuk saya bukan supaya saya tidak hanya menjadi orang biasa tetapi menjadi orang luar biasa"',
+'"Berani mengambil keputusan maka anda telah melangkah 10 kali lebih cepat untuk sukses"'
 ];
 
-    function refreshTime() {
-        var dateString = new Date().toLocaleString(navigator.language, {
-            timeZone: "Asia/Jakarta", hour: '2-digit', minute:'2-digit', hour12: false
-        });
-        var formattedString = dateString.replace(", ", " - ");
-    timeDisplay.innerHTML = formattedString;
+function refreshTime() {
+    var dateString = new Date().toLocaleString(navigator.language, {
+        timeZone: "Asia/Jakarta", hour: '2-digit', minute:'2-digit', hour12: false
+    });
+    var formattedString = dateString.replace(", ", " - ");
+timeDisplay.innerHTML = formattedString;
 }
 
 function ChangeIt() 
 {
-    var num = Math.ceil( Math.random() * totalCount );
-    document.body.background = 'img/'+num+'.jpg';
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundPosition = "center center";
-    document.body.style.backgroundAttachment = "fixed";
+var num = Math.ceil( Math.random() * totalCount );
+document.body.background = 'img/'+num+'.jpg';
+document.body.style.backgroundSize = "cover";
+document.body.style.backgroundRepeat = "no-repeat";
+document.body.style.backgroundPosition = "center center";
+document.body.style.backgroundAttachment = "fixed";
 }
-    
+
 if (currentHour >= 0 && currentHour < 6) {
     greeting.innerHTML = 'Mau ngapain pagi-pagi begini?';
 } else if (currentHour >= 6 && currentHour < 10) {
     greeting.innerHTML = 'Selamat Pagi';
 } else if (currentHour >= 10 && currentHour < 15) {
-    greeting.innerHTML = 'Selamat Siang';
+greeting.innerHTML = 'Selamat Siang';
 } else if (currentHour >= 15 && currentHour < 19) {
     greeting.innerHTML = 'Selamat Sore';
 } else {
     greeting.innerHTML = 'Selamat Malam';
-    }
-    
-    // import { kataMotivasi } from './scripts/kata-motivasi.js';
-    var ran = Math.ceil( Math.random() * kataMotivasi.length );
-    quotes.innerHTML = kataMotivasi[ran];
-    setInterval(refreshTime, 1000);
-    ChangeIt();
+}
+
+// import { kataMotivasi } from './scripts/kata-motivasi.js';
+var ran = Math.ceil( Math.random() * kataMotivasi.length );
+quotes.innerHTML = kataMotivasi[ran];
+setInterval(refreshTime, 1000);
+ChangeIt();
 </script>
+</body>
 </html>
