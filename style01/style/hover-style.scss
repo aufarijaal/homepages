@@ -1,0 +1,11 @@
+@import './variables.scss';
+
+.cloud:hover {
+    box-shadow: 0px 0px 0px 0px darken($green, 12%);
+}
+.social:hover {
+    box-shadow: 0px 0px 0px 0px darken($red, 12%);
+}
+.edu:hover {
+    box-shadow: 0px 0px 0px 0px darken($cyan, 12%);
+}

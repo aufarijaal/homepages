@@ -1,20 +1,30 @@
+.cloud:hover {
+  -webkit-box-shadow: 0px 0px 0px 0px #16f84e;
+          box-shadow: 0px 0px 0px 0px #16f84e;
+}
+
+.social:hover {
+  -webkit-box-shadow: 0px 0px 0px 0px #fe1719;
+          box-shadow: 0px 0px 0px 0px #fe1719;
+}
+
+.edu:hover {
+  -webkit-box-shadow: 0px 0px 0px 0px #4edefc;
+          box-shadow: 0px 0px 0px 0px #4edefc;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
 
-table {
+.main {
   display: inline-block;
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -35%);
-          transform: translate(-50%, -35%);
-}
-
-th {
-  color: #F8F8F2;
-  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .text {
@@ -23,7 +33,7 @@ th {
 
 #time {
   margin-top: 10vh;
-  font-size: 42pt;
+  font-size: 48pt;
   font-weight: 700;
   color: #F8F8F2;
   -webkit-touch-callout: none;
@@ -110,21 +120,6 @@ th {
           transition-duration: 0.5s;
 }
 
-.cloud:hover {
-  -webkit-box-shadow: 0px 0px 0px 0px #16f84e;
-          box-shadow: 0px 0px 0px 0px #16f84e;
-}
-
-.social:hover {
-  -webkit-box-shadow: 0px 0px 0px 0px #fe1719;
-          box-shadow: 0px 0px 0px 0px #fe1719;
-}
-
-.edu:hover {
-  -webkit-box-shadow: 0px 0px 0px 0px #4edefc;
-          box-shadow: 0px 0px 0px 0px #4edefc;
-}
-
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,29 +140,7 @@ th {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin: 5px 0;
-}
-
-ul {
-  list-style-type: none;
-  border: 1px solid black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-li {
-  margin: 5px;
-  border: 1px solid black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: 3% 0;
 }
 
 a {
@@ -185,6 +158,7 @@ a:hover {
   font-size: 2vh;
   font-weight: 500;
   text-align: center;
-  margin-top: 320px;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.563);
+  margin-top: 4vh;
 }
 /*# sourceMappingURL=main.css.map */

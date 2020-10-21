@@ -1,0 +1,15 @@
+.cloud:hover {
+  -webkit-box-shadow: 0px 0px 0px 0px #16f84e;
+          box-shadow: 0px 0px 0px 0px #16f84e;
+}
+
+.social:hover {
+  -webkit-box-shadow: 0px 0px 0px 0px #fe1719;
+          box-shadow: 0px 0px 0px 0px #fe1719;
+}
+
+.edu:hover {
+  -webkit-box-shadow: 0px 0px 0px 0px #4edefc;
+          box-shadow: 0px 0px 0px 0px #4edefc;
+}
+/*# sourceMappingURL=hover-style.css.map */
