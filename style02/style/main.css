@@ -1,0 +1,166 @@
+.cloud:hover {
+  -webkit-box-shadow: 0px 0px 0px 0px #4edefc;
+          box-shadow: 0px 0px 0px 0px #4edefc;
+}
+
+.social:hover {
+  -webkit-box-shadow: 0px 0px 0px 0px #4edefc;
+          box-shadow: 0px 0px 0px 0px #4edefc;
+}
+
+.edu:hover {
+  -webkit-box-shadow: 0px 0px 0px 0px #4edefc;
+          box-shadow: 0px 0px 0px 0px #4edefc;
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+  background: url(../img/annie-spratt-BqYttheZzUo-unsplash.jpg) no-repeat center center fixed;
+}
+
+.main {
+  display: inline-block;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -55%);
+          transform: translate(-50%, -55%);
+}
+
+.text {
+  text-align: center;
+}
+
+#time {
+  margin-top: 10vh;
+  font-size: 48pt;
+  font-weight: 700;
+  color: #F8F8F2;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.563);
+}
+
+#greeting {
+  font-size: 32pt;
+  font-weight: 500;
+  color: #F8F8F2;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.563);
+  margin-bottom: 3vh;
+}
+
+.card {
+  width: 180px;
+  height: 210px;
+  border-radius: 0px;
+  margin: 10px;
+  background-color: #333545;
+  display: inline-block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-shadow: 0px 19px 24px 5px rgba(0, 0, 0, 0.17);
+          box-shadow: 0px 19px 24px 5px rgba(0, 0, 0, 0.17);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.header {
+  padding: 5px;
+  text-align: center;
+  font-weight: 600;
+  color: #282A36;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cloud {
+  font-weight: 800;
+  background-color: #8AE9FD;
+  -webkit-box-shadow: 0px 5px 0px 0px #4edefc;
+          box-shadow: 0px 5px 0px 0px #4edefc;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.social {
+  font-weight: 800;
+  background-color: #8AE9FD;
+  -webkit-box-shadow: 0px 5px 0px 0px #4edefc;
+          box-shadow: 0px 5px 0px 0px #4edefc;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.edu {
+  font-weight: 800;
+  background-color: #8AE9FD;
+  -webkit-box-shadow: 0px 5px 0px 0px #4edefc;
+          box-shadow: 0px 5px 0px 0px #4edefc;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-bottom: auto;
+  margin-top: 10px;
+}
+
+.items {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 3% 0;
+}
+
+a {
+  text-decoration: none;
+  color: #F8F8F2;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #6272A4;
+}
+
+.quotes {
+  color: #F8F8F2;
+  font-size: 2.4vh;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.563);
+  margin-top: 4vh;
+  max-width: 60ch;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*# sourceMappingURL=main.css.map */
