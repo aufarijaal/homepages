@@ -1,9 +1,9 @@
-var timeDisplay = document.getElementById("time");
-var greeting = document.getElementById("greeting");
-var quotes = document.getElementById("quotes");
-var totalCount = 10;
-var today = new Date()
-var currentHour = today.getHours()
+let timeDisplay = document.getElementById("time");
+let greeting = document.getElementById("greeting");
+let quotes = document.getElementById("quotes");
+let totalCount = 10;
+let today = new Date()
+let currentHour = today.getHours()
 
 if (currentHour >= 0 && currentHour < 6) {
     greeting.innerHTML = 'Mau ngapain pagi-pagi begini?';
@@ -17,7 +17,7 @@ if (currentHour >= 0 && currentHour < 6) {
     greeting.innerHTML = 'Selamat Malam';
 }
 
-var ran = Math.floor( Math.random() * kataMotivasi.length );
+let ran = Math.floor( Math.random() * kataMotivasi.length );
 quotes.innerHTML = kataMotivasi[ran];
 setInterval(refreshTime, 1000);
 ChangeIt();
