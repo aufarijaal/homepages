@@ -27,16 +27,21 @@ const myColors = {
     yellow: '#DBF157',
     pink: '#F157C5'
 }
+
 getCurrentTheme();
+
+
 
 // Display TIME to page
 setInterval(() => {
     let getDate = new Date();
-    let timeFunc = getDate.toLocaleString("id", { timeZone: "Asia/Jakarta", hour: '2-digit', minute:'2-digit', hour12: false });
-    let dateFunc = getDate.toLocaleString("id", { timeZone: "Asia/Jakarta", month: "long",day: "numeric", year: "numeric" });
+    let timeFunc = getDate.toLocaleString(navigator.language, { hour: '2-digit', minute:'2-digit', hour12: false });
+    let dateFunc = getDate.toLocaleString(navigator.language, { month: "long",day: "numeric", year: "numeric" , weekday: "long"});
 
     date.innerHTML = dateFunc;
     clock.innerHTML = timeFunc;
+
+    (allBookmarksContainer.scrollWidth > allBookmarksContainer.clientWidth) ? allBookmarksContainer.classList.add('justified') : allBookmarksContainer.classList.remove('justified');
 }, 1000);
 clock.addEventListener('mouseenter', () => {
     date.classList.toggle('show');
@@ -104,6 +109,7 @@ const getBookmarkList = () => {
         let bookmarkList = JSON.parse(localStorage.getItem('bookmarkList'));
         
         if(allBookmarksContainer.childNodes[0].nodeValue == 'no bookmark yet.') {allBookmarksContainer.childNodes[0].remove()};
+
         // Dsplay all avaialble bookmark from localstorage to page
         allBookmarksContainer.innerHTML = '';
         for(let i = 0; i < bookmarkList.length; i++) {
@@ -142,14 +148,12 @@ btnEnterAddMode.addEventListener('click', () => {
     let formEdit = document.querySelector('form#edit');
 
     formEdit.classList.toggle('show');
-    btnAddNewBookmark.classList.toggle('visible');
-    // (btnEnterAddMode.innerHTML == 'Add New') ? btnEnterAddMode.innerHTML = 'OK' : btnEnterAddMode.innerHTML = 'Add New';
+    btnAddNewBookmark.classList.toggle('visible'); 
+    btnToUpdateBookmark.classList.remove('visible');
     if(btnEnterAddMode.innerHTML == 'Add New') {
         btnEnterAddMode.innerHTML = 'OK';
-        btnEnterAddMode.style.backgroundColor = myColors.blue;
     } else {
         btnEnterAddMode.innerHTML = 'Add New'
-        btnEnterAddMode.style.background = 'none';
     }
     document.querySelector('input#title').value = '';
     document.querySelector('input#url').value = '';
@@ -171,13 +175,10 @@ btnToEnterEditMode.addEventListener('click', () => {
     let btnEditRemoveContainer = document.querySelectorAll('.btn-action-container');
     let formEdit = document.querySelector('form#edit');
     
-    // (btnToEnterEditMode.innerHTML == 'Edit') ? btnToEnterEditMode.innerHTML = 'OK' : btnToEnterEditMode.innerHTML = 'Edit';
-    if(btnToEnterEditMode.innerHTML == 'Edit') {
+    if(btnToEnterEditMode.innerHTML == 'Edit') { 
         btnToEnterEditMode.innerHTML = 'OK';
-        btnToEnterEditMode.style.backgroundColor = myColors.green;
     } else {
         btnToEnterEditMode.innerHTML = 'Edit'
-        btnToEnterEditMode.style.background = 'none';
     }
     for(const each of btnEditRemoveContainer) {
         each.classList.toggle('visible');
@@ -246,7 +247,6 @@ btnToUpdateBookmark.addEventListener('click', () => {
     origin.value = '';
     formEdit.classList.remove('show');
     btnToEnterEditMode.innerHTML = 'Edit';
-    btnToEnterEditMode.style.background = 'none';
     btnEnterAddMode.disabled = false;
     btnEnterAddMode.style.cursor = 'pointer';
 })
@@ -262,7 +262,6 @@ document.addEventListener('keydown', event => {
     // Exit Add Mode
     if(keyName === 'Escape' && btnEnterAddMode.innerHTML === 'OK') {
         btnEnterAddMode.innerHTML = 'Add New';
-        btnEnterAddMode.style.background = 'none';
         formEdit.classList.remove('show');
         btnToEnterEditMode.disabled = false;
         btnToEnterEditMode.style.cursor = 'pointer';
@@ -276,7 +275,6 @@ document.addEventListener('keydown', event => {
     // Exit Edit Mode
     if(keyName === 'Escape' && btnToEnterEditMode.innerHTML === 'OK') {
         btnToEnterEditMode.innerHTML = 'Edit';
-        btnToEnterEditMode.style.background = 'none';
         btnEnterAddMode.disabled = false;
         btnEnterAddMode.style.cursor = 'pointer';
         for(const each of btnEditRemoveContainer) {
@@ -315,35 +313,6 @@ imgToggle.addEventListener('click', () => {
     }
     getCurrentTheme();
 })
-// function setToLight() {
-//     let list = document.querySelectorAll('a.bookmark');
-
-//     moon.style.display = 'block';
-//     sun.style.display = 'none';
-//     imgToggle.style.backgroundColor = 'white';
-//     document.body.style.backgroundColor = myColors.lightSecondary;
-//     document.querySelector('form#edit').style.backgroundColor = 'white';
-//     btnEnterAddMode.style.color = 'black';
-//     btnToEnterEditMode.style.color = 'black';
-//     for(each of list) {
-//         each.style.backgroundColor = 'white';
-//     }
-// }
-// function setToDark() {
-//     let list = document.querySelectorAll('a.bookmark');
-
-//     moon.style.display = 'none';
-//     sun.style.display = 'block';
-//     imgToggle.style.backgroundColor = myColors.darkSecondary;
-//     document.body.style.backgroundColor = myColors.darkPrimary;
-//     document.querySelector('form#edit').style.backgroundColor = myColors.darkSecondary;
-//     btnEnterAddMode.style.color = 'white';
-//     btnToEnterEditMode.style.color = 'white';
-//     for(each of list) {
-//         each.style.backgroundColor = myColors.darkSecondary;
-//     }
-// }
-
 function setTheme (act,formEl,moonDis,sunDis,toggleFormListBg,bodyBg,btnTextColor) {
     let listBookmark = document.querySelectorAll('a.bookmark');
 
@@ -375,3 +344,4 @@ function getCurrentTheme() {
         setTheme('LIGHT',editForm,'block','none','white',myColors.lightSecondary,'black');
     }
 }
+

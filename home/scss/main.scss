@@ -61,18 +61,25 @@ div#toggle {
     justify-content: center;
     align-items: center;
     border-radius: 20em;
-    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     cursor: pointer;
-    transition: background-color .3s ease;
+    transition: background-color .3s, box-shadow .3s ease;
 
-    &:active, &:hover {
+    &:hover {
         box-shadow: none;
         animation: rotate-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    &:active {
+        box-shadow: none;
+        -webkit-animation: rotate-scale-down 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: rotate-scale-down 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     }
 }
 .main {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    // border: 2px solid white;
 }
 #ill {
     position: absolute;
@@ -133,8 +140,14 @@ div#toggle {
     padding: 20px 20px;
     color: $red;
     margin-top: 30px;
+    // max-width: 95%;
+    // align-self: center;
     // border: 2px solid white;
     overflow-x: scroll;
+    position: relative;
+}
+.speed-dial-container.justified {
+    justify-content: start;
 }
 ::-webkit-scrollbar {
     height: 6px;
@@ -153,6 +166,7 @@ div#toggle {
 .item-content {
     position: relative;
     margin: auto 5px;
+    z-index: 9999;
 }
 .bookmark {
     text-decoration: none;
@@ -163,15 +177,18 @@ div#toggle {
     margin: 5px;
     border-radius: 20px;
     transition: 300ms all ease;
-    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 8px 0px;
     color: unset;
+
 
     &:hover {
         background-color: darken($color: $dark-secondary, $amount: 3%);
-        box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.3);
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 8px 8px 0px;
+        // -webkit-animation: scale-down-center 0.4s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+        // animation: scale-down-center 0.4s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
     }
     &:active {
-        box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 8px 0px;
     }
     &:visited { text-decoration: none; color: unset; }
     &:focus { text-decoration: none; color: unset; }
@@ -266,6 +283,12 @@ input#url {
     align-self: center;
     z-index: 10;
 }
+.ed-active {
+    background-color: $green;
+}
+.ad-active {
+    background-color: $blue;
+}
 .btn-enter-edit {
     background: none;
     transition: background 700ms cubic-bezier(0.075, 0.820, 0.165, 1.000);
@@ -326,6 +349,56 @@ input#url {
 }
 
 // keyframes
+@-webkit-keyframes scale-down-center {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+  }
+  @keyframes scale-down-center {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+  }
+  
+@-webkit-keyframes rotate-scale-down {
+    0% {
+      -webkit-transform: scale(1) rotateZ(0);
+              transform: scale(1) rotateZ(0);
+    }
+    50% {
+      -webkit-transform: scale(0.5) rotateZ(180deg);
+              transform: scale(0.5) rotateZ(180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateZ(360deg);
+              transform: scale(1) rotateZ(360deg);
+    }
+  }
+  @keyframes rotate-scale-down {
+    0% {
+      -webkit-transform: scale(1) rotateZ(0);
+              transform: scale(1) rotateZ(0);
+    }
+    50% {
+      -webkit-transform: scale(0.5) rotateZ(180deg);
+              transform: scale(0.5) rotateZ(180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateZ(360deg);
+              transform: scale(1) rotateZ(360deg);
+    }
+  }
+  
 @-webkit-keyframes slide-in-bottom {
     0% {
       -webkit-transform: translateY(1000px);
