@@ -24,7 +24,7 @@ div#toggle {
   justify-content: center;
   align-items: center;
   border-radius: 20em;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 24px;
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s ease;
 }
