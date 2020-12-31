@@ -2,6 +2,8 @@
 
 Preview :
 
+- home (New :star:) [Demo here](#)
+  ![home Preview](home/Preview.png)
 - Style01 (With random background generated)
   ![Style01 Preview](assets/homepage-style01-demo.gif)
 - Style02 (tilt hover style)
