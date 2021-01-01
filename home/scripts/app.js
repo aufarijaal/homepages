@@ -1,3 +1,4 @@
+
 let clock = document.getElementById('clock');
 let date = document.getElementById('date');
 let btnToEnterEditMode = document.querySelector('.btn-enter-edit');
@@ -141,6 +142,8 @@ const removeThis = title => {
     }
     localStorage.setItem('bookmarkList', JSON.stringify(bookmarkList));
     btnToEnterEditMode.innerHTML = 'Edit';
+    btnEnterAddMode.disabled = false;
+    btnEnterAddMode.style.cursor = 'pointer';
     getBookmarkList();
 }
 // Enter Add bookmark
