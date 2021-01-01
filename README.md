@@ -2,7 +2,7 @@
 
 Preview :
 
-- home (New :star:) [Demo here](www.google.com)
+- home (New :star:) [Demo here](https://aufarijaal.github.io/home/)
   ![home Preview](home/Preview.png)
 - Style01 (With random background generated)
   ![Style01 Preview](assets/homepage-style01-demo.gif)
